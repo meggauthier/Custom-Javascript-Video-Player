@@ -4,45 +4,64 @@
 <meta charset="utf-8">
 <title>Video Player</title>
 <link href="styles.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Yatra+One' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="script.js"></script>
-<link rel="stylesheet" href="jquery-ui.min.js">
- 	 <script src="jquery-ui.js"></script>
+
 </head>
 
 <body>
-	<div class="videoPlayer">
-            <h2> Video Player</h2>
+<div class="videoPlayer">
             
-            	<div class="videoTop">
+        <h2>The Mews Online</h2>
+        
+       <div class="videoLeft">
                 	
         
-            <video id="video" src="BigBuckBunny.mp4" width="320" height="180" poster="home.jpg" onclick="togglePlayPause()"></video>
+            <video id="video" src="video/mewsDebut.mp4" width="320" height="180" poster="images/mew1.jpg"  onclick="togglePlayPause()"></video>
     
             <div class="videoControls">
             
                 <button id="play-pause-btn" class="play" title="play" onclick="togglePlayPause()">Play</button>
                 <button id="stop-btn" class="stop" title="stop" onclick="stopVideo()">Stop</button>
                 Volume<input id="volume" type="range" onchange="changeVolume()" step="0.05" min="0" max="1" value="1" />
+                <button id="rewind-btn" title="rewind" onClick="setTime()">Rewind</button>
                 
                 <button id="full-screen" class="full-screen" title="full-screen" onClick="fullScreen()">Full Screen</button>
                 
                     <progress id="progressBar" min="0" max="100" value="0"></progress>
     
-                </div><!--closes videoTop-->
-    
-            </div>
- 
-     
-			   <div class="videoBot">
-               	
-               		<video id="video" src="BigBuckBunny.mp4" width="220" height="100" poster="home.jpg" onclick="togglePlayPause()"></video>
-                      </div><!--closes videoPlayer div-->
-                </div>
-               		
-               
-      
+  </div><!--closes vid left-->
+  	</div><!--closes vidControls-->      
                 
-                 
-                 
+   
+  <div class="videoRight">
+  
+  	<a onclick="loadVideo('mewsDebut.mp4')">
+    	<img src="images/mew1.jpg" />
+        <p class="title">The Mews</p>
+        <p class="desc">Premium cat content on everything kitty cats. We cover all of your mews needs!</p>
+        					</a>
+     <a onclick="loadVideo('sports 1.mp4')">
+    	<img src="images/sport.jpg" /> 
+        <p class="title">Mews Sports</p>
+        <p class="desc">National Karate Champion Mr. Mewagi, Mewcheal Phelps and more!!</p>
+        					</a>
+               	
+  <a onclick="loadVideo('break.mp4')">
+    	<img src="images/break.jpg" />
+        <p class="title">Breaking News</p>
+        <p class="desc">Klepto Kitty Sighting!!!</p>
+        					</a>
+   
+     <a onclick="loadVideo('bloopers.mp4')">
+    	<img src="images/mew1.jpg" />
+        <p class="title">Blooper Reel</p>
+        <p class="desc">Funny outtakes and bloopers from the cast. </p>
+        					</a>                         
+                           
+   	</div><!--closes videoRight-->                        
+
+  </div><!--closes vid player-->      
 </body>
+
 </html>

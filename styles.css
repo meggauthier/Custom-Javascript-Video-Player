@@ -1,31 +1,61 @@
 /* CSS Document */
 
+body {
+	
+}
+
 div.videoPlayer {
-	width: 600px;
-	height: 400px;
-	border: 1px solid #000;
-	margin: 0 auto;
-	background-color: #C4C4C4;
-		
+	max-height: 600px;
+	max-width: 900px;
+	border: solid;
+	background-image:url(images/background.jpg);
+	background-repeat:no-repeat;
+	background-size: 600px 500px;
+	
+
 }
 
-div.videoPlayer h1 {
-	text-align: center;	
+div.videoPlayer div.videoLeft {
+	margin-left: 140px;
+	margin-top: 50px;
 }
 
-div.videoTop {
+h2 {
+	text-align: left;	
+	font-family: Yatra One, monospace;
+	font-size:25px;
+	color: purple;
+	margin-bottom: 10px;
+	margin-left: 177px;
+	max-width: 50%;
+}
+
+div.videoLeft {
 	width: 320px;
 	height: 180px;
 	border:solid; 
 	float: left;
-	margin-left: 5px;
+
 	
 }
-
-div.videoBot {
-	width: 220px;
+div.videoControls {
+		border: solid;
+		border-radius: 5px;
+}
+ 
+div.videoRight {
+	max-width: 200px;	
+	height: 500px;
+	overflow:auto;
 	border: solid;
-	height: 400px;
-	float: right;
-	margin-right: 5px;
+	background: black;
+}
+p {
+	color: white;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;	
+}
+
+div.videoRight a img {
+	width: 100%;
+	
 }

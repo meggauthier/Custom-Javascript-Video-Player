@@ -13,6 +13,17 @@ var videoPlayer;
 function startVideoPlayer()
 {
 	videoPlayer = document.getElementById("video");
+	
+	/*sends the specified video to the video object when the page is first loaded. */
+	
+	loadVideo("Meg.wmv");
+	
+/*turn off browser based video element controls which are available by default */
+
+videoPlayer.controls = false;
+
+console.log("video controls are disabled");
+
 	videoPlayer.addEventListener("startProgressBar", updateProgressBar, false);
 }
 
@@ -64,3 +75,13 @@ function fullScreen() {
 	console.log("Trying to go full screen. ");
 	
 }
+
+function loadVideo(video)
+	{
+		var vPath = 'video/' + video;
+		
+		videoPlayer.src = vPath;
+		videoPlayer.load();
+		
+	}
+
